@@ -8,7 +8,7 @@
 <meta name="description" content="LJC Design Studio is a graphic design studio specialising in logo design, branding, print and social media management.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Mrs+Saint+Delafield&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -31,15 +31,14 @@
   <ul>
     <li style="--i:0"><a href="#work">Work</a></li>
     <li style="--i:1"><a href="#services">Services</a></li>
-    <li style="--i:2"><a href="#about">About</a></li>
-    <li style="--i:3"><a href="#contact">Contact</a></li>
+    <li style="--i:2"><a href="#contact">Enquire</a></li>
   </ul>
 </nav>
 
 <main id="top">
 
   <section class="hero">
-    <p class="pill">Get a Design Quote</p>
+    <a href="#contact" class="pill">Get a Design Quote</a>
     <h1 class="hero-headline">
       <span class="headline-main">
         <span class="word" style="--i:0">A</span>
@@ -80,7 +79,122 @@
     </div>
   </section>
 
+  <section class="feature feature-logos reveal" id="logos">
+    <div class="feature-inner">
+      <p class="eyebrow">What We Do</p>
+      <h2 class="feature-heading">Logo Design</h2>
+      <p class="feature-copy">A distinctive mark built to work everywhere your brand shows up — from your storefront to your Instagram grid.</p>
+
+      <p class="client-tags-label">Who we work with</p>
+      <ul class="tag-list">
+        <li style="--i:0">Lash &amp; Brow Studios</li>
+        <li style="--i:1">Beauty Clinics</li>
+        <li style="--i:2">Hair Salons</li>
+        <li style="--i:3">Aesthetic Practitioners</li>
+        <li style="--i:4">Skincare Brands</li>
+      </ul>
+
+      <div class="slideshow" aria-label="Logo design examples">
+        <img class="slide" style="--i:0" src="images/work-hairloss-signage.jpg" alt="Hair Loss Clinic UK logo signage">
+        <img class="slide" style="--i:1" src="images/work-blend-signage.jpg" alt="Blend Studio logo signage">
+        <img class="slide" style="--i:2" src="images/work-hairloss-product.jpg" alt="Hair Loss Clinic UK logo on product packaging">
+        <img class="slide" style="--i:3" src="images/work-skin-voucher.jpg" alt="SKIN Beauty logo on a gift voucher">
+      </div>
+
+      <a href="#contact" class="btn-primary">Get Your Own Logo</a>
+    </div>
+  </section>
+
+  <section class="feature feature-services reveal" id="services">
+    <div class="feature-services-inner">
+      <div class="feature-services-text">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="feature-heading">Design, Print &amp; Social</h2>
+        <ul class="service-rows">
+          <li>
+            <h3>Design</h3>
+            <p>Branding, packaging and everything in between.</p>
+          </li>
+          <li>
+            <h3>Print</h3>
+            <p>Business cards, brochures, vouchers and signage — designed and print-ready.</p>
+          </li>
+          <li class="service-rows-feature">
+            <h3>Social Media Management</h3>
+            <p>Ongoing content that keeps your brand consistent, post to post.</p>
+          </li>
+        </ul>
+        <a href="#contact" class="btn-primary">Start a Project</a>
+      </div>
+
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <img class="phone-screen" src="images/instagram-profile.png" alt="LJC Design Studio's Instagram profile, managed by the studio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="enquiry reveal" id="contact">
+    <div class="enquiry-inner">
+      <p class="eyebrow">Get In Touch</p>
+      <h2 class="feature-heading">Start Your Project</h2>
+      <p class="feature-copy">Tell us a little about what you need and we'll get back to you.</p>
+
+      <form class="enquiry-form" action="mailto:hello@ljcdesignstudio.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="Name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="Email" autocomplete="email" required>
+          </label>
+        </div>
+        <label>
+          <span>Service</span>
+          <select name="Service">
+            <option>Logo Design</option>
+            <option>Branding</option>
+            <option>Print</option>
+            <option>Social Media Management</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>
+          <span>Tell us about your project</span>
+          <textarea name="Message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn-primary">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
 </main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="images/logo-transparent.png" alt="LJC Design Studio" class="footer-logo">
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <p class="eyebrow">Studio Hours</p>
+        <p>Monday &ndash; Thursday<br>8am &ndash; 3pm</p>
+      </div>
+      <div class="footer-col">
+        <p class="eyebrow">Contact</p>
+        <p>
+          <a href="mailto:hello@ljcdesignstudio.com">hello@ljcdesignstudio.com</a><br>
+          <a href="https://instagram.com/ljcdesignstudio" target="_blank" rel="noopener">@ljcdesignstudio</a>
+        </p>
+      </div>
+    </div>
+
+    <p class="footer-copy">&copy; <span id="year"></span> LJC Design Studio. All rights reserved.</p>
+  </div>
+</footer>
 
 <script src="js/script.js"></script>
 </body>
