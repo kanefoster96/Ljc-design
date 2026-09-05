@@ -14,16 +14,22 @@ function closeMenu() {
   nav.classList.remove('open');
   toggle.classList.remove('open');
   toggle.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('menu-open');
 }
 
 toggle.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   toggle.classList.toggle('open', isOpen);
   toggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('menu-open', isOpen);
 });
 
 nav.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
 });
 
 // Footer year
