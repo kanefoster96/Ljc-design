@@ -11,6 +11,8 @@
   --line: rgba(247, 245, 244, 0.1);
 
   --sans: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+  --serif-display: 'Playfair Display', Georgia, serif;
+  --script: 'Mrs Saint Delafield', cursive;
   --gutter: clamp(20px, 6vw, 80px);
 }
 
@@ -144,27 +146,69 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 100svh;
+  min-height: 58vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 140px var(--gutter) 80px;
+  gap: clamp(18px, 3vw, 28px);
+  text-align: center;
+  padding: clamp(92px, 13vw, 126px) var(--gutter) clamp(36px, 5vw, 56px);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(247, 245, 244, 0.22);
+  background: rgba(247, 245, 244, 0.05);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--blush);
+  opacity: 0;
+  transform: translateY(0.4em);
+  animation: pill-in 0.6s ease forwards;
+  animation-delay: 0.05s;
+}
+
+@keyframes pill-in {
+  from { opacity: 0; transform: translateY(0.4em); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-headline {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
+  font-family: var(--serif-display);
+  font-size: clamp(2rem, 6.6vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.headline-main {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
   row-gap: 0.08em;
   column-gap: 0.28em;
-  font-size: clamp(2.1rem, 7vw, 4.6rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+}
+
+.headline-accent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 0.22em;
+  margin-top: 0.12em;
+  font-family: var(--script);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 1.5em;
 }
 
 .word {
@@ -190,12 +234,12 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .word {
+  .word, .pill {
     animation: none;
     opacity: 1;
-    color: var(--white);
     transform: none;
   }
+  .word { color: var(--white); }
   .site-header {
     animation: none;
     transform: none;
@@ -206,7 +250,7 @@ body.menu-open { overflow: hidden; }
 /* ---------- Marquee ---------- */
 .marquee {
   overflow: hidden;
-  padding: 0 0 clamp(80px, 12vw, 140px);
+  padding: 0 0 clamp(48px, 7vw, 84px);
 }
 
 .marquee-track {
