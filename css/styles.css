@@ -52,6 +52,14 @@ button { -webkit-tap-highlight-color: transparent; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 110;
+  transform: translateY(-100%);
+  animation: header-in 0.7s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  /* keep in sync with the last .word's finish time in .hero-headline */
+  animation-delay: 2s;
+}
+
+@keyframes header-in {
+  to { transform: translateY(0); }
 }
 
 .header-inner {
@@ -188,6 +196,10 @@ body.menu-open { overflow: hidden; }
     color: var(--white);
     transform: none;
   }
+  .site-header {
+    animation: none;
+    transform: none;
+  }
   .marquee-track { animation: none !important; }
 }
 
@@ -209,7 +221,7 @@ body.menu-open { overflow: hidden; }
   width: clamp(220px, 32vw, 420px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: clamp(12px, 1.8vw, 24px);
   flex-shrink: 0;
 }
 
