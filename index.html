@@ -3,157 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#1a1816">
+<meta name="theme-color" content="#050505">
 <title>LJC Design Studio — Logo, Branding &amp; Print Design</title>
 <meta name="description" content="LJC Design Studio is a graphic design studio specialising in logo design, branding, print and social media management.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#top">Skip to content</a>
 
-<header class="site-header" id="site-header">
+<header class="site-header">
   <div class="header-inner">
-    <a href="#top" class="brand">LJC <span>Design Studio</span></a>
+    <a href="#top" class="brand">
+      <img src="images/logo-transparent.png" alt="LJC Design Studio" class="brand-logo">
+    </a>
 
-    <nav class="main-nav" id="main-nav">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<main id="main">
+<nav class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <ul>
+    <li style="--i:0"><a href="#work">Work</a></li>
+    <li style="--i:1"><a href="#services">Services</a></li>
+    <li style="--i:2"><a href="#about">About</a></li>
+    <li style="--i:3"><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <section class="hero" id="top">
-    <img class="hero-logo" src="images/logo-mark-alt.jpg" alt="LJC Design Studio">
-    <p class="hero-tagline">Logo Design &nbsp;&middot;&nbsp; Branding &nbsp;&middot;&nbsp; Print</p>
+<main id="top">
+
+  <section class="hero">
+    <h1 class="hero-headline">
+      <span class="word" style="--i:0">A</span>
+      <span class="word" style="--i:1">logo</span>
+      <span class="word" style="--i:2">&amp;</span>
+      <span class="word" style="--i:3">branding</span>
+      <span class="word" style="--i:4">studio.</span>
+      <span class="word" style="--i:5">Built</span>
+      <span class="word" style="--i:6">on</span>
+      <span class="word" style="--i:7">detail.</span>
+      <span class="word" style="--i:8">Designed</span>
+      <span class="word" style="--i:9">to</span>
+      <span class="word" style="--i:10">be</span>
+      <span class="word" style="--i:11">remembered.</span>
+    </h1>
   </section>
 
-  <section class="intro">
-    <p class="eyebrow">Studio</p>
-    <h1>Considered design,<br>for brands worth remembering.</h1>
-    <p class="intro-copy">LJC Design Studio creates logos, branding and print collateral for
-      clinics, studios and small businesses who want to look as good as they work.
-      Every project is built with care, restraint, and an eye for the details
-      that make a brand feel finished.</p>
-  </section>
+  <section class="marquee" id="work" aria-label="Selected work">
+    <div class="marquee-track">
+      <img src="images/work-hairloss-signage.jpg" alt="Hair Loss Clinic UK wall signage in a clinic interior">
+      <img src="images/work-blend-signage.jpg" alt="Blend Studio metallic wall signage in a salon">
+      <img src="images/work-hairloss-product.jpg" alt="Hair Loss Clinic UK branded product bottle">
+      <img src="images/work-skin-voucher.jpg" alt="SKIN Beauty branded gift voucher">
+      <img src="images/work-blend-towels.jpg" alt="Blend Studio branded towels folded in a salon">
+      <img src="images/work-hairloss-brochure.jpg" alt="Hair Loss Clinic UK brochure display on a salon counter">
+      <img src="images/work-blend-shelf.jpg" alt="Blend Studio branded product bottles on a salon shelf">
 
-  <section class="work" id="work">
-    <div class="section-heading">
-      <p class="eyebrow">Selected Work</p>
-      <h2>A few brands we've brought to life</h2>
-    </div>
-
-    <article class="project">
-      <div class="project-media project-media--pair">
-        <img src="images/work-hairloss-signage.jpg" alt="Hair Loss Clinic UK wall signage in a clinic interior" loading="lazy" decoding="async">
-        <img src="images/work-hairloss-product.jpg" alt="Hair Loss Clinic UK branded product bottle" loading="lazy" decoding="async">
-      </div>
-      <div class="project-caption">
-        <h3>Hair Loss Clinic UK</h3>
-        <p>Brand identity, signage &amp; product packaging</p>
-      </div>
-    </article>
-
-    <article class="project project--reverse">
-      <div class="project-media project-media--single">
-        <img src="images/work-blend-signage.jpg" alt="Blend Studio metallic wall signage in a salon" loading="lazy" decoding="async">
-      </div>
-      <div class="project-caption">
-        <h3>Blend Studio</h3>
-        <p>Logo design &amp; salon signage</p>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project-media project-media--pair">
-        <img src="images/work-blend-towels.jpg" alt="Blend Studio branded towels folded in a salon" loading="lazy" decoding="async">
-        <img src="images/work-blend-shelf.jpg" alt="Blend Studio branded product bottles on a salon shelf" loading="lazy" decoding="async">
-      </div>
-      <div class="project-caption">
-        <h3>Blend Studio</h3>
-        <p>Print &amp; branded studio essentials</p>
-      </div>
-    </article>
-
-    <article class="project project--reverse">
-      <div class="project-media project-media--single">
-        <img src="images/work-hairloss-brochure.jpg" alt="Hair Loss Clinic UK brochure display on a salon counter" loading="lazy" decoding="async">
-      </div>
-      <div class="project-caption">
-        <h3>Hair Loss Clinic UK</h3>
-        <p>Print collateral &amp; in-clinic displays</p>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project-media project-media--single project-media--narrow">
-        <img src="images/work-skin-voucher.jpg" alt="SKIN Beauty branded gift voucher" loading="lazy" decoding="async">
-      </div>
-      <div class="project-caption">
-        <h3>SKIN Beauty</h3>
-        <p>Logo design &amp; gift voucher print</p>
-      </div>
-    </article>
-  </section>
-
-  <section class="services" id="services">
-    <div class="section-heading">
-      <p class="eyebrow">Services</p>
-      <h2>What we offer</h2>
-    </div>
-    <ul class="services-list">
-      <li>
-        <h3>Logo Design</h3>
-        <p>A distinctive mark built to work everywhere your brand shows up.</p>
-      </li>
-      <li>
-        <h3>Branding</h3>
-        <p>Colour, type and tone of voice — a complete identity, not just a logo.</p>
-      </li>
-      <li>
-        <h3>Print</h3>
-        <p>Business cards, brochures, vouchers and signage, designed and print-ready.</p>
-      </li>
-      <li>
-        <h3>Social Media Management</h3>
-        <p>Ongoing content that keeps your brand consistent, post to post.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="info" id="about">
-    <div class="info-inner">
-      <div class="info-block">
-        <p class="eyebrow">Booking</p>
-        <p>Bookings via DM or Email.<br>A deposit is required to secure your booking.</p>
-      </div>
-      <div class="info-block">
-        <p class="eyebrow">Studio Hours</p>
-        <p>Monday &ndash; Thursday<br>8am &ndash; 3pm</p>
-      </div>
+      <img src="images/work-hairloss-signage.jpg" alt="" aria-hidden="true">
+      <img src="images/work-blend-signage.jpg" alt="" aria-hidden="true">
+      <img src="images/work-hairloss-product.jpg" alt="" aria-hidden="true">
+      <img src="images/work-skin-voucher.jpg" alt="" aria-hidden="true">
+      <img src="images/work-blend-towels.jpg" alt="" aria-hidden="true">
+      <img src="images/work-hairloss-brochure.jpg" alt="" aria-hidden="true">
+      <img src="images/work-blend-shelf.jpg" alt="" aria-hidden="true">
     </div>
   </section>
 
 </main>
-
-<footer class="site-footer" id="contact">
-  <p class="eyebrow">Get in Touch</p>
-  <h2>Let's design something worth talking about.</h2>
-  <a class="contact-link" href="mailto:hello@ljcdesignstudio.com">hello@ljcdesignstudio.com</a>
-  <a class="contact-link" href="https://instagram.com/ljcdesignstudio" target="_blank" rel="noopener">@ljcdesignstudio</a>
-  <p class="footer-copy">&copy; <span id="year"></span> LJC Design Studio. All rights reserved.</p>
-</footer>
 
 <script src="js/script.js"></script>
 </body>
