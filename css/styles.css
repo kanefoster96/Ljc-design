@@ -22,7 +22,7 @@ html {
 }
 
 #work, #logos, #services, #contact, #reviews {
-  scroll-margin-top: 130px;
+  scroll-margin-top: 110px;
 }
 
 body {
@@ -75,22 +75,19 @@ button { -webkit-tap-highlight-color: transparent; }
 .promo-bar a:hover { opacity: 0.7; }
 
 .site-header {
-  margin: 12px var(--gutter) 0;
-  border-radius: 999px;
-  background: rgba(10, 10, 10, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(247, 245, 244, 0.14);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10px 10px 26px;
-  padding-left: max(26px, env(safe-area-inset-left));
-  padding-right: max(10px, env(safe-area-inset-right));
+  padding: 20px var(--gutter);
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
 }
 
 .brand-logo {
@@ -236,7 +233,7 @@ body.menu-open { overflow: hidden; }
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: clamp(40px, 7vw, 72px) var(--gutter) 0;
+  padding: clamp(96px, 9vw, 140px) var(--gutter) 0;
 }
 
 .hero-rating {
