@@ -55,3 +55,15 @@ if ('IntersectionObserver' in window && revealEls.length) {
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Reviews carousel arrows
+const reviewsTrack = document.querySelector('.reviews-track');
+if (reviewsTrack) {
+  const scrollByCard = (direction) => {
+    const card = reviewsTrack.querySelector('.review-card');
+    const distance = card ? card.getBoundingClientRect().width + 20 : reviewsTrack.clientWidth * 0.8;
+    reviewsTrack.scrollBy({ left: direction * distance, behavior: 'smooth' });
+  };
+  document.querySelector('.carousel-prev')?.addEventListener('click', () => scrollByCard(-1));
+  document.querySelector('.carousel-next')?.addEventListener('click', () => scrollByCard(1));
+}
