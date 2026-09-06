@@ -563,7 +563,13 @@ body.menu-open { overflow: hidden; }
   margin: 0 auto 48px;
   text-align: center;
 }
-.reviews-copy { margin: 0 auto; }
+.reviews-copy { margin: 0 auto 16px; }
+.reviews-stat {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--blush);
+}
 
 .reviews-carousel {
   max-width: 1100px;
