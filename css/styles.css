@@ -184,15 +184,15 @@ body.menu-open { overflow: hidden; }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: hero-bg-fade 30s ease-in-out infinite;
+  animation: hero-bg-fade 18s ease-in-out infinite;
   animation-delay: calc(var(--i) * 6s);
 }
 
 @keyframes hero-bg-fade {
   0% { opacity: 0; }
-  3% { opacity: 0.9; }
-  17% { opacity: 0.9; }
-  20% { opacity: 0; }
+  5% { opacity: 0.9; }
+  28% { opacity: 0.9; }
+  33% { opacity: 0; }
   100% { opacity: 0; }
 }
 
