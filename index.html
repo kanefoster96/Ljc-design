@@ -118,11 +118,15 @@
         <p class="social-lead-prompt">Drop your Instagram profile below and we'll take it from there.</p>
         <form class="social-lead-form" id="social-lead-form" action="mailto:hello@ljcdesignstudio.com" method="post" enctype="text/plain">
           <input type="hidden" name="Instagram Handle" id="social-handle-hidden" value="">
-          <div class="social-lead-row">
-            <span class="social-lead-prefix" id="social-lead-prefix" aria-hidden="true">@</span>
+          <div class="social-lead-row social-lead-row-handle">
+            <span class="social-lead-prefix" aria-hidden="true">@</span>
             <label class="sr-only" for="social-lead-input">Instagram handle</label>
             <input type="text" id="social-lead-input" placeholder="yourhandle" autocomplete="off" required>
-            <button type="submit" aria-label="Submit">&#8594;</button>
+          </div>
+          <div class="social-lead-row social-lead-row-email" id="social-lead-email-row">
+            <label class="sr-only" for="social-lead-email">Email</label>
+            <input type="email" id="social-lead-email" name="Email" placeholder="Email" autocomplete="email" disabled required>
+            <button type="submit" aria-label="Submit" disabled>&#8594;</button>
           </div>
         </form>
       </article>

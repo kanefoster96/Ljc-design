@@ -68,28 +68,38 @@ if (reviewsTrack) {
   document.querySelector('.carousel-next')?.addEventListener('click', () => scrollByCard(1));
 }
 
-// Social card lead form: handle first, then email
+// Social card lead form: entering the handle reveals the email row
 const socialForm = document.getElementById('social-lead-form');
 if (socialForm) {
-  const input = document.getElementById('social-lead-input');
-  const prefix = document.getElementById('social-lead-prefix');
+  const handleInput = document.getElementById('social-lead-input');
   const hiddenHandle = document.getElementById('social-handle-hidden');
+  const emailRow = document.getElementById('social-lead-email-row');
+  const emailInput = document.getElementById('social-lead-email');
+  const emailButton = emailRow.querySelector('button');
   let awaitingEmail = false;
+
+  const revealEmail = () => {
+    const handle = handleInput.value.trim();
+    if (!handle || awaitingEmail) return;
+    hiddenHandle.value = handle.startsWith('@') ? handle : `@${handle}`;
+    emailInput.disabled = false;
+    emailButton.disabled = false;
+    emailRow.classList.add('is-visible');
+    awaitingEmail = true;
+    emailInput.focus();
+  };
+
+  handleInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      revealEmail();
+    }
+  });
 
   socialForm.addEventListener('submit', (e) => {
     if (!awaitingEmail) {
       e.preventDefault();
-      const handle = input.value.trim();
-      if (!handle) return;
-      hiddenHandle.value = handle.startsWith('@') ? handle : `@${handle}`;
-      input.value = '';
-      input.type = 'email';
-      input.placeholder = 'Email';
-      input.autocomplete = 'email';
-      input.name = 'Email';
-      prefix.hidden = true;
-      awaitingEmail = true;
-      input.focus();
+      revealEmail();
     }
     // second submit (awaitingEmail true): let it send via mailto
   });
