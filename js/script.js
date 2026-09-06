@@ -72,6 +72,7 @@ if (reviewsTrack) {
 const socialForm = document.getElementById('social-lead-form');
 if (socialForm) {
   const input = document.getElementById('social-lead-input');
+  const prefix = document.getElementById('social-lead-prefix');
   const hiddenHandle = document.getElementById('social-handle-hidden');
   let awaitingEmail = false;
 
@@ -86,6 +87,7 @@ if (socialForm) {
       input.placeholder = 'Email';
       input.autocomplete = 'email';
       input.name = 'Email';
+      prefix.hidden = true;
       awaitingEmail = true;
       input.focus();
     }
