@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>Our Work — LJC Design Studio</title>
+<meta name="description" content="A selection of logo, branding and print work by LJC Design Studio for clinics, studios and small businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#top">Skip to content</a>
+
+<div class="site-top">
+  <div class="promo-bar">
+    <a href="contact.html">Bookings Open &mdash; Enquire Today</a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo-transparent.png" alt="LJC Design Studio" class="brand-logo">
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<nav class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <ul>
+    <li style="--i:0"><a href="work.html" aria-current="page">Work</a></li>
+    <li style="--i:1"><a href="services.html">Services</a></li>
+    <li style="--i:2"><a href="contact.html">Enquire</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+  <section class="page-hero reveal">
+    <div class="page-hero-inner">
+      <p class="eyebrow">Our Work</p>
+      <h1 class="feature-heading">Selected Work</h1>
+      <p class="feature-copy">A look at recent logo, branding and print projects for clinics, studios and small businesses.</p>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="work-grid">
+      <img src="images/work-hairloss-signage.jpg" alt="Hair Loss Clinic UK wall signage in a clinic interior">
+      <img src="images/work-hairloss-product.jpg" alt="Hair Loss Clinic UK branded product bottle">
+      <img src="images/work-hairloss-brochure.jpg" alt="Hair Loss Clinic UK brochure display on a salon counter">
+      <img src="images/work-blend-signage.jpg" alt="Blend Studio metallic wall signage in a salon">
+      <img src="images/work-blend-towels.jpg" alt="Blend Studio branded towels folded in a salon">
+      <img src="images/work-blend-shelf.jpg" alt="Blend Studio branded product bottles on a salon shelf">
+      <img src="images/hero-muse-signage.jpg" alt="MUSE hair &amp; beauty wall signage">
+      <img src="images/work-muse-bottles.jpg" alt="MUSE hair &amp; beauty branded product bottles">
+      <img src="images/work-muse-print.jpg" alt="MUSE hair &amp; beauty printed business cards and brochures">
+      <img src="images/hero-zena-boxes.jpg" alt="ZENA branded packaging boxes">
+      <img src="images/hero-alekcia-signage.jpg" alt="ALEKCIA wall signage">
+      <img src="images/work-skin-voucher.jpg" alt="SKIN Beauty branded gift voucher">
+    </div>
+  </section>
+
+  <div class="services-cta reveal">
+    <a href="contact.html" class="btn-primary">Start a Project</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="images/logo-transparent.png" alt="LJC Design Studio" class="footer-logo">
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <p class="eyebrow">Studio Hours</p>
+        <p>Monday &ndash; Thursday<br>8am &ndash; 3pm</p>
+      </div>
+      <div class="footer-col">
+        <p class="eyebrow">Contact</p>
+        <p>
+          <a href="mailto:hello@ljcdesignstudio.com">hello@ljcdesignstudio.com</a><br>
+          <a href="https://instagram.com/ljcdesignstudio" target="_blank" rel="noopener">@ljcdesignstudio</a>
+        </p>
+      </div>
+    </div>
+
+    <p class="footer-copy">&copy; <span id="year"></span> LJC Design Studio. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
