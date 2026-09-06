@@ -93,30 +93,6 @@ button { -webkit-tap-highlight-color: transparent; }
   width: auto;
 }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.header-contact-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: var(--blush);
-  color: var(--black);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: background-color 0.25s ease, transform 0.25s ease;
-}
-.header-contact-btn:hover {
-  background: var(--white);
-  transform: translateY(-1px);
-}
-
 /* ---------- Menu toggle ---------- */
 .menu-toggle {
   display: flex;
