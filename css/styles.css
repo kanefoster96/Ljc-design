@@ -284,6 +284,11 @@ body.menu-open { overflow: hidden; }
     animation: none !important;
     transform: none !important;
   }
+  .service-card-slide {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  .service-card-slide:first-child { opacity: 1 !important; }
   .reveal, .reveal * {
     opacity: 1 !important;
     transform: none !important;
@@ -391,14 +396,32 @@ body.menu-open { overflow: hidden; }
   text-align: left;
 }
 
-.service-card img {
+.service-card-media {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
   border-radius: clamp(12px, 1.8vw, 20px);
+  overflow: hidden;
   margin-bottom: 20px;
+  background: var(--panel);
 }
-.service-card-social-img { object-position: top; }
+.service-card-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: service-card-fade 14s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 7s);
+}
+@keyframes service-card-fade {
+  0% { opacity: 0; }
+  6% { opacity: 1; }
+  46% { opacity: 1; }
+  54% { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 .service-card h3 {
   font-family: var(--serif-display);
@@ -408,6 +431,46 @@ body.menu-open { overflow: hidden; }
 }
 .service-card p { color: var(--grey); }
 .service-card-feature h3 { color: var(--blush); }
+
+.service-card-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-lead-form { margin-top: 24px; }
+.social-lead-row {
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 6px 6px 20px;
+}
+.social-lead-row input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.social-lead-row input:focus { outline: none; }
+.social-lead-row input::placeholder { color: var(--grey); }
+.social-lead-row button {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: none;
+  background: var(--blush);
+  color: var(--black);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+.social-lead-row button:hover { background: var(--white); }
 
 /* ---------- Enquiry form ---------- */
 .enquiry-inner {

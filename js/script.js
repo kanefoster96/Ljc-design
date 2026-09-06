@@ -67,3 +67,28 @@ if (reviewsTrack) {
   document.querySelector('.carousel-prev')?.addEventListener('click', () => scrollByCard(-1));
   document.querySelector('.carousel-next')?.addEventListener('click', () => scrollByCard(1));
 }
+
+// Social card lead form: handle first, then email
+const socialForm = document.getElementById('social-lead-form');
+if (socialForm) {
+  const input = document.getElementById('social-lead-input');
+  const hiddenHandle = document.getElementById('social-handle-hidden');
+  let awaitingEmail = false;
+
+  socialForm.addEventListener('submit', (e) => {
+    if (!awaitingEmail) {
+      e.preventDefault();
+      const handle = input.value.trim();
+      if (!handle) return;
+      hiddenHandle.value = handle.startsWith('@') ? handle : `@${handle}`;
+      input.value = '';
+      input.type = 'email';
+      input.placeholder = 'Email';
+      input.autocomplete = 'email';
+      input.name = 'Email';
+      awaitingEmail = true;
+      input.focus();
+    }
+    // second submit (awaitingEmail true): let it send via mailto
+  });
+}

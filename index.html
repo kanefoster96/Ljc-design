@@ -104,24 +104,40 @@
   <section class="feature reveal" id="services">
     <div class="service-cards">
       <article class="service-card">
-        <img src="images/work-hairloss-signage.jpg" alt="Hair Loss Clinic UK logo signage">
+        <div class="service-card-media">
+          <img class="service-card-slide" style="--i:0" src="images/work-hairloss-signage.jpg" alt="Hair Loss Clinic UK logo signage">
+          <img class="service-card-slide" style="--i:1" src="images/work-blend-signage.jpg" alt="Blend Studio logo signage">
+        </div>
         <h3>Logo Design</h3>
         <p>A distinctive mark built to work everywhere your brand shows up.</p>
       </article>
       <article class="service-card">
-        <img src="images/work-hairloss-product.jpg" alt="Hair Loss Clinic UK branded product packaging">
+        <div class="service-card-media">
+          <img class="service-card-slide" style="--i:0" src="images/work-hairloss-product.jpg" alt="Hair Loss Clinic UK branded product packaging">
+          <img class="service-card-slide" style="--i:1" src="images/work-blend-shelf.jpg" alt="Blend Studio branded products on a shelf">
+        </div>
         <h3>Branding</h3>
         <p>Colour, type and tone of voice — a complete identity, not just a logo.</p>
       </article>
       <article class="service-card">
-        <img src="images/work-hairloss-brochure.jpg" alt="Hair Loss Clinic UK printed brochures on display">
+        <div class="service-card-media">
+          <img class="service-card-slide" style="--i:0" src="images/work-hairloss-brochure.jpg" alt="Hair Loss Clinic UK printed brochures on display">
+          <img class="service-card-slide" style="--i:1" src="images/work-skin-voucher.jpg" alt="SKIN Beauty printed gift voucher">
+        </div>
         <h3>Print</h3>
         <p>Business cards, brochures, vouchers and signage, designed and print-ready.</p>
       </article>
-      <article class="service-card service-card-feature">
-        <img class="service-card-social-img" src="images/instagram-profile.png" alt="LJC Design Studio's Instagram profile, managed by the studio">
+      <article class="service-card service-card-feature service-card-social">
         <h3>Social Media Management</h3>
         <p>Ongoing content that keeps your brand consistent, post to post.</p>
+        <form class="social-lead-form" id="social-lead-form" action="mailto:hello@ljcdesignstudio.com" method="post" enctype="text/plain">
+          <input type="hidden" name="Instagram Handle" id="social-handle-hidden" value="">
+          <div class="social-lead-row">
+            <label class="sr-only" for="social-lead-input">Instagram handle</label>
+            <input type="text" id="social-lead-input" placeholder="@" autocomplete="off" required>
+            <button type="submit" aria-label="Submit">&#8594;</button>
+          </div>
+        </form>
       </article>
     </div>
 
