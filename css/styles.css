@@ -180,7 +180,7 @@ body.menu-open { overflow: hidden; }
 
 .hero-bg-track {
   display: flex;
-  width: max-content;
+  width: 800%;
   height: 100%;
   opacity: 0.9;
   animation: hero-bg-scroll 70s linear infinite;
@@ -188,7 +188,7 @@ body.menu-open { overflow: hidden; }
 
 .hero-bg-slide {
   flex-shrink: 0;
-  width: 100vw;
+  width: 12.5%;
   height: 100%;
   object-fit: cover;
 }
