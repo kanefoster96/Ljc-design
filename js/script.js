@@ -56,6 +56,47 @@ if ('IntersectionObserver' in window && revealEls.length) {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Animate the hero rating count up when it scrolls into view
+const countEl = document.querySelector('.hero-rating-count');
+if (countEl) {
+  const target = parseInt(countEl.dataset.target, 10) || 0;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const animateCount = () => {
+    if (prefersReducedMotion) {
+      countEl.textContent = target;
+      return;
+    }
+    const duration = 1400;
+    const start = performance.now();
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      countEl.textContent = Math.round(easeOutCubic(progress) * target);
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const countIo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCount();
+            countIo.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    countIo.observe(countEl);
+  } else {
+    countEl.textContent = target;
+  }
+}
+
 // Reviews carousel arrows
 const reviewsTrack = document.querySelector('.reviews-track');
 if (reviewsTrack) {
