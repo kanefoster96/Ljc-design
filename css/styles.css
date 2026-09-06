@@ -220,6 +220,11 @@ body.menu-open { overflow: hidden; }
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 6px 30px rgba(0, 0, 0, 0.6);
 }
 .hero-heading.reveal.is-visible { transition-delay: 0.15s; }
+.hero-heading-name {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
 
 .hero-rating {
   position: absolute;
