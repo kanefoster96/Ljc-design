@@ -222,6 +222,7 @@ body.menu-open { overflow: hidden; }
 .hero-heading.reveal.is-visible { transition-delay: 0.15s; }
 .hero-heading-intro {
   display: inline-block;
+  font-family: var(--sans);
   font-weight: 400;
   font-size: clamp(1.1rem, 2.6vw, 1.75rem);
 }
