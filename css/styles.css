@@ -389,7 +389,7 @@ body.menu-open { overflow: hidden; }
 /* ---------- Service cards ---------- */
 .service-cards {
   max-width: 1100px;
-  margin: 0 auto 56px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(40px, 6vw, 72px);
@@ -412,8 +412,8 @@ body.menu-open { overflow: hidden; }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: service-card-fade 14s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 7s);
+  animation: service-card-fade 4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 2s);
 }
 @keyframes service-card-fade {
   0% { opacity: 0; }
