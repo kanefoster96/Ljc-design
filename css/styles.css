@@ -8,6 +8,7 @@
   --grey: #8c8a88;
   --blush: #cf9a95;
   --blush-deep: #b9746e;
+  --gold: #e0b95f;
   --line: rgba(247, 245, 244, 0.1);
 
   --sans: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -20,7 +21,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-#work, #logos, #services, #contact {
+#work, #logos, #services, #contact, #reviews {
   scroll-margin-top: 130px;
 }
 
@@ -173,7 +174,7 @@ body.menu-open { overflow: hidden; }
   position: relative;
   min-height: 62vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
 }
@@ -215,7 +216,36 @@ body.menu-open { overflow: hidden; }
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: clamp(64px, 12vw, 120px) var(--gutter);
+  padding: clamp(40px, 7vw, 72px) var(--gutter) 0;
+}
+
+.hero-rating {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  bottom: clamp(32px, 8vw, 72px);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(247, 245, 244, 0.25);
+  background: rgba(5, 5, 5, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.hero-rating:hover { border-color: rgba(247, 245, 244, 0.5); }
+.hero-rating-stars {
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
 }
 
 .hero-eyebrow {
@@ -235,6 +265,7 @@ body.menu-open { overflow: hidden; }
   color: var(--white);
 }
 .hero-heading.reveal.is-visible { transition-delay: 0.15s; }
+.hero-rating.reveal.is-visible { transition-delay: 0.3s; }
 
 /* ---------- Welcome intro ---------- */
 .welcome {
